@@ -1,0 +1,19 @@
+# Cloudflare Verified AI Search Bot Custom WAF Skip Rule
+# Guide: https://proofofcite.com/guides/cloudflare-ai-crawlers
+# Free live checker: https://proofofcite.com/tools/ai-crawler-checker
+#
+# Placement:
+#   Cloudflare Dashboard -> Security -> WAF -> Custom rules -> Create rule
+#   Order / Priority: #1 (before Managed Rules & Super Bot Fight Mode)
+#   Action: Skip
+#   Components to Skip:
+#     [x] Super Bot Fight Mode
+#     [x] Managed Rules
+#     [x] JS Detections / Browser Integrity Check
+#   Note: Exempt /robots.txt, /sitemap.xml, and /llms.txt from Bot Fight Mode challenges.
+
+(cf.client.bot and (http.user_agent contains "OAI-SearchBot" or http.user_agent contains "ChatGPT-User" or http.user_agent contains "PerplexityBot" or http.user_agent contains "Perplexity-User" or http.user_agent contains "Claude-SearchBot" or http.user_agent contains "Claude-User" or http.user_agent contains "Googlebot" or http.user_agent contains "Bingbot" or http.user_agent contains "Applebot"))
+
+# Verify live edge status after saving (or test via https://proofofcite.com/tools/ai-crawler-checker):
+#   curl -i -s -A "PerplexityBot/1.0 (+https://perplexity.ai/perplexitybot)" "https://your-domain.com/" | head -n 20
+#   curl -i -s -A "OAI-SearchBot/1.0 (+https://openai.com/searchbot)" "https://your-domain.com/" | head -n 20

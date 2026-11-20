@@ -1,0 +1,12 @@
+protocol,domain,audit_date,readiness_score,grade,raw_html_words,rendered_js_words,bots_blocked,bots_total,perplexity_category_hits,perplexity_category_total,perplexity_discovery_hits,perplexity_discovery_total,primary_finding
+Arcus,arcus.xyz,2026-11-13,88,A,1421,968,0,16,,,,,"100/100 bot access; missing /about, /security, and DefiLlama audit links (Nov 13 baseline)."
+Monad,monad.xyz,2026-11-15,86,A,709,650,0,16,0,4,2,6,"16/16 allowed; 10/10 brand/how-to hits, 0/91 category links across 24 Perplexity+Gemini queries, dead rpc.testnet.monad.xyz in /llms.txt."
+Axis,axis.to,2026-11-14,76,B,857,439,7,16,0,5,2,7,"Ships valid 2,108B /llms.txt; training bots blocked + Nov 19 targeted 25-byte HTTP 403 on PerplexityBot despite robots.txt line 143 Allow: /; 0/5 category hits."
+Mezo,mezo.org,2026-11-14,68,C,453,444,0,16,0,5,2,7,"/robots.txt, /sitemap.xml, and /llms.txt return 404; /docs and /earn/lock expose 0 raw words; 0/5 BTCFi category hits."
+Pharaoh Exchange,phar.gg,2026-11-14,65,C,8,391,0,16,0,5,2,7,"Client-side app exposes 8 raw HTML words without JS (vs. 391 rendered), missing /llms.txt & JSON-LD; 0/5 category hits."
+Nado,nado.xyz,2026-11-14,63,C,445,412,7,16,0,5,2,7,"Cloudflare managed rules block training bots, 0 root h1 / JSON-LD, sitemap.xml leaks /emailtest, 0/5 perp category hits."
+Current Finance,current.finance,2026-11-14,59,C,0,494,7,16,0,5,1,7,"Vite CSR SPA exposes 0 raw HTML words without JS despite manual JSON-LD; misses 6/7 non-brand Perplexity queries (0/5 category)."
+infiniFi,infinifi.xyz,2026-11-14,54,D,0,256,14,16,0,5,2,7,"Site-wide Cloudflare HTTP 403 challenge blocks 14/16 crawlers and /sitemap.xml; 0/5 category hits."
+Entropy,entropy.io,2026-11-13,47,D,0,429,7,16,,,,,"0 raw HTML words (vs. 429 rendered) + 3-host split across entropy.io, pro.entropy.io, and entropy.trade (Nov 13 baseline)."
+Loopscale,loopscale.com,2026-11-14,46,D,0,308,14,16,0,5,2,7,"Site-wide Cloudflare HTTP 403 challenge blocks 14/16 bots, 0 JSON-LD blocks, 0/5 Solana lending hits."
+Project X,prjx.com,2026-11-14,32,F,7,964,8,16,0,5,0,7,"JS-only frontend (7 raw words vs. 964 rendered), targeted PerplexityBot HTTP 403, soft-200 HTML on /llms.txt, 0/12 Perplexity Search hits."
