@@ -7,7 +7,8 @@ Free live tools (browserless HTTP + edge WAF + `/llms.txt` DNS verification):
 - [/llms.txt Validator & RPC DNS Checker](https://proofofcite.com/tools/llms-txt-validator)
 - [Interactive Benchmark & Methodology](https://proofofcite.com/benchmark)
 - [Cloudflare WAF Verified-Bot Playbook](https://proofofcite.com/guides/cloudflare-ai-crawlers)
-- [2026 AI Crawler User-Agent Matrix (16 Bots)](https://proofofcite.com/research/ai-crawler-user-agents-2026)
+- [2026 AI Crawler User-Agent Matrix (22 Bots)](https://proofofcite.com/research/ai-crawler-user-agents-2026)
+- [2026 Technical GEO & AEO Checklist (18 Checks)](https://proofofcite.com/research/crypto-aeo-geo-checklist-2026)
 
 ## Key Empirical Findings (11 Protocols)
 
